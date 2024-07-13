@@ -213,7 +213,6 @@ button:hover {
   color: #f7b318;
 }
 
-
 #timer {
   display: none;
   margin-top: 20px;
@@ -265,7 +264,6 @@ button:hover {
 
   .answer {
     width: 90%;
-    pointer-events: none; /* Disable hover effects */
   }
 
   h1,
@@ -276,6 +274,10 @@ button:hover {
 
   #timer {
     font-size: 1.2rem;
+  }
+
+  .answer:hover {
+    background-color: #003554; /* Same as default background color */
   }
 }
 
@@ -296,7 +298,6 @@ button:hover {
 
   .answer {
     width: 95%;
-    pointer-events: none; /* Disable hover effects */
   }
 
   h1,
@@ -308,7 +309,12 @@ button:hover {
   #timer {
     font-size: 1rem;
   }
+
+  .answer:hover {
+    background-color: #003554; /* Same as default background color */
+  }
 }
+
 /* Adding a fallback for browsers that do not support backdrop-filter */
 @supports not (
   (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
@@ -319,15 +325,4 @@ button:hover {
   }
 }
 
-/* New CSS to remove hover effect on small screens */
-@media (max-width: 768px) {
-  .answer:hover {
-    background-color: #003554; /* Keep the default background color */
-  }
-}
 
-@media (max-width: 480px) {
-  .answer:hover {
-    background-color: #003554; /* Keep the default background color */
-  }
-}
