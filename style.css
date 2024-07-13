@@ -213,6 +213,7 @@ button:hover {
   color: #f7b318;
 }
 
+
 #timer {
   display: none;
   margin-top: 20px;
@@ -264,6 +265,7 @@ button:hover {
 
   .answer {
     width: 90%;
+    pointer-events: none; /* Disable hover effects */
   }
 
   h1,
@@ -294,6 +296,7 @@ button:hover {
 
   .answer {
     width: 95%;
+    pointer-events: none; /* Disable hover effects */
   }
 
   h1,
@@ -306,7 +309,6 @@ button:hover {
     font-size: 1rem;
   }
 }
-
 /* Adding a fallback for browsers that do not support backdrop-filter */
 @supports not (
   (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px))
