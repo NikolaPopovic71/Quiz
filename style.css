@@ -187,32 +187,6 @@ button:hover {
   margin: 100px auto 50px;
 }
 
-.answer {
-  width: 50%;
-  margin: 10px 0;
-  padding: 15px;
-  font-size: 1rem;
-  border: 2px solid #003554;
-  cursor: pointer;
-  background-color: #003554; /* Default background color */
-  color: #f7b318;
-  transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.answer:hover {
-  background-color: #0056b3; /* Hover color */
-}
-
-.answer.correct {
-  background-color: green;
-  color: #f7b318;
-}
-
-.answer.wrong {
-  background-color: #b0183d;
-  color: #f7b318;
-}
-
 #timer {
   display: none;
   margin-top: 20px;
@@ -246,6 +220,34 @@ button:hover {
   filter: blur(5px); /* Blur effect */
 }
 
+
+/* Common styles for all screen sizes */
+.answer {
+  width: 50%;
+  margin: 10px 0;
+  padding: 15px;
+  font-size: 1rem;
+  border: 2px solid #003554;
+  cursor: pointer;
+  background-color: #003554; /* Default background color */
+  color: #f7b318;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.answer:hover {
+  background-color: #0056b3; /* Hover color */
+}
+
+.answer.correct {
+  background-color: green;
+  color: #f7b318;
+}
+
+.answer.wrong {
+  background-color: #b0183d;
+  color: #f7b318;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .glass-card {
@@ -276,6 +278,7 @@ button:hover {
     font-size: 1.2rem;
   }
 
+  /* Remove hover effect on small screens */
   .answer:hover {
     background-color: #003554; /* Same as default background color */
   }
@@ -310,6 +313,7 @@ button:hover {
     font-size: 1rem;
   }
 
+  /* Remove hover effect on small screens */
   .answer:hover {
     background-color: #003554; /* Same as default background color */
   }
