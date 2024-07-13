@@ -250,75 +250,49 @@ button:hover {
 }
 
 /* Responsive design */
+/* Remove hover effect on small screens (for touch devices only) */
 @media (max-width: 768px) {
-  .glass-card {
-    width: 80%;
-    height: auto;
-    padding: 10px;
-  }
-
-  #quiz-page,
-  #welcome-page,
-  #result-modal {
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto; /* Center content */
-  }
-
   .answer {
     width: 90%;
   }
-
   h1,
   h2,
   p {
     font-size: 1.2rem;
   }
-
   #timer {
     font-size: 1.2rem;
   }
 
-  /* Remove hover effect on small screens */
-  .answer:hover {
-    background-color: #003554; /* Same as default background color */
+  /* Only apply this style if the device is touch-enabled */
+  @media (hover: none) {
+    .answer:hover {
+      background-color: #003554; /* Same as default background color */
+    }
   }
 }
 
 @media (max-width: 480px) {
-  .glass-card {
-    width: 90%;
-    height: auto;
-    padding: 10px;
-  }
-
-  #quiz-page,
-  #welcome-page,
-  #result-modal {
-    width: 100%;
-    padding: 20px;
-    margin: 0 auto; /* Center content */
-  }
-
   .answer {
     width: 95%;
   }
-
   h1,
   h2,
   p {
     font-size: 1rem;
   }
-
   #timer {
     font-size: 1rem;
   }
 
-  /* Remove hover effect on small screens */
-  .answer:hover {
-    background-color: #003554; /* Same as default background color */
+  /* Only apply this style if the device is touch-enabled */
+  @media (hover: none) {
+    .answer:hover {
+      background-color: #003554; /* Same as default background color */
+    }
   }
 }
+
 
 /* Adding a fallback for browsers that do not support backdrop-filter */
 @supports not (
