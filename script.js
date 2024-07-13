@@ -150,9 +150,7 @@ function showQuestion() {
 
 function checkAnswer(selectedIndex) {
   const questionData = selectedQuestions[currentQuestionIndex];
-  const selectedAnswerElement = document.getElementById(
-    `answer${selectedIndex}`
-  );
+  const selectedAnswerElement = document.getElementById(`answer${selectedIndex}`);
   const selectedAnswer = selectedAnswerElement.textContent
     .replace(/\s/g, "")
     .toLowerCase();
@@ -189,10 +187,20 @@ function checkAnswer(selectedIndex) {
   setTimeout(showQuestion, 1500); // Increase the delay to give users more time to see the correct answer
 }
 
+// Add event listeners for touch devices
+document.querySelectorAll('.answer').forEach(button => {
+  button.addEventListener('touchstart', event => {
+    event.preventDefault();
+    checkAnswer(event.currentTarget.id.replace('answer', ''));
+  });
+});
+
 function removeHoverEffect() {
   const answerButtons = document.querySelectorAll(".answer");
   answerButtons.forEach((button) => {
     button.classList.add("no-hover");
+    button.classList.remove("correct", "wrong");
+    button.style.backgroundColor = "";
   });
 }
 
